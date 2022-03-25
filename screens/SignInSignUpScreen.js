@@ -5,6 +5,7 @@ import { API, API_LOGIN, API_SIGNUP, API_WHOAMI } from '../constants/API';
 import axios from 'axios';
 import { useDispatch } from "react-redux";
 import { logInAction } from "../redux/ducks/TransactionAuth";
+import { commonStyles } from "../styles/commonStyles";
 
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -122,9 +123,9 @@ export default function SignInSignUpScreen({ navigation }) {
 
       <View />
       <View>
-        <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity style={styles.button} onPress={isLogIn ? login : signUp}>
-            <Text style={styles.buttonText}> {isLogIn ? "Log In" : "Sign Up"} </Text>
+        <View style={{ flexDirection: "row", justifyContent:'center' }}>
+          <TouchableOpacity style={commonStyles.button} onPress={isLogIn ? login : signUp}>
+            <Text style={commonStyles.buttonText}> {isLogIn ? "Log In" : "Sign Up"} </Text>
           </TouchableOpacity>
           {loading ? <ActivityIndicator style={{ marginLeft: 10 }} /> : <View />}
         </View>
@@ -154,7 +155,7 @@ export default function SignInSignUpScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'seashell',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -169,7 +170,7 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   inputView: {
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "wheat",
     borderRadius: 30,
     width: "70%",
     height: 45,
@@ -180,16 +181,6 @@ const styles = StyleSheet.create({
     height: 50,
     flex: 1,
     padding: 10,
-  },
-  button: {
-    backgroundColor: 'blue',
-    borderRadius: 25,
-  },
-  buttonText: {
-    fontWeight: '400',
-    fontSize: 20,
-    margin: 20,
-    color: 'white'
   },
   errorText: {
     fontSize: 15,
