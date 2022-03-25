@@ -61,9 +61,11 @@ export default function SummaryScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.title, styles.text, { margin: 20 }]}>Money In: ${moneyIn}</Text>
-      <Text style={[styles.title, styles.text, { margin: 20 }]}>Money Out: ${moneyOut}</Text>
-      <Text style={[styles.title, styles.text, { margin: 20 }]}>Balance: ${balAmt}</Text>
+      <Text style={[styles.title, styles.text, { margin: 40, color: (balAmt) < 0 ? 'firebrick' : 'mediumaquamarine' }]}>Balance: ${balAmt}</Text>
+      <Text style={[styles.headerTitle, styles.text, { marginLeft: 20, marginTop: 40, textAlign:'left', fontSize:18, textDecorationLine:'underline' }]}>Breakdown:</Text>
+      <Text style={[styles.headerTitle, styles.text, { margin: 20, fontSize:20 }]}>Money In: ${moneyIn}</Text>
+      <Text style={[styles.headerTitle, styles.text, { marginLeft: 20, fontSize:20 }]}>Money Out: ${moneyOut}</Text>
+      
     </View>
   );
 }

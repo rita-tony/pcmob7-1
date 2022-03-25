@@ -53,7 +53,7 @@ export default function CreateScreen({ navigation }) {
         />
 
         <TouchableOpacity
-          style={[styles.button, { margin: 20 }]}
+          style={[styles.button, { marginTop: 20 }]}
           onPress={saveTransaction}
         >
           <Text style={styles.buttonText}>Save</Text>
@@ -66,13 +66,14 @@ export default function CreateScreen({ navigation }) {
 
 const additionalStyles = StyleSheet.create({
   input: {
-    fontSize: 24,
+    fontSize: 20,
     borderWidth: 1,
     borderColor: "black",
-    marginBottom: 15,
+    marginBottom: 40,
+    padding:10,
   },
   label: {
-    fontSize: 28,
+    fontSize: 22,
     marginBottom: 10,
     marginLeft: 5,
   },
