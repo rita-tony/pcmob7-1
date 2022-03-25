@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { ActivityIndicator, Text, View, Switch, TouchableOpacity, TouchableWithoutFeedback, ScrollView } from "react-native";
+import React from "react";
+import { Text, View, Switch, TouchableOpacity } from "react-native";
 import { commonStyles, lightStyles, darkStyles } from "../styles/commonStyles";
 import { useSelector, useDispatch } from "react-redux";
 import { changeModeAction, clearFields } from "../redux/ducks/accountPref";

@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import axios from "axios";
-import { API, API_BALANCE_AMOUNT, API_WHOAMI } from "../constants/API";
+import { API, API_BALANCE_AMOUNT } from "../constants/API";
 import { commonStyles, lightStyles, darkStyles } from "../styles/commonStyles";
 import { useSelector, useDispatch } from "react-redux";
-import { setCurrentUserId, setCurrentUserName } from "../redux/ducks/TransactionAuth";
-import { setCurrentUserTheme } from "../redux/ducks/accountPref";
-
 
 export default function SummaryScreen({ navigation }) {
   const dispatch = useDispatch();

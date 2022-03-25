@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, Text, View, TouchableOpacity, FlatList, RefreshControl } from "react-native";
+import { Text, View, TouchableOpacity, FlatList, RefreshControl } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import axios from "axios";
 import { API, API_TRANSACTIONS, API_TRANSACTION, API_WHOAMI } from "../constants/API";
