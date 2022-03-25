@@ -51,9 +51,8 @@ export default function ShowScreen({ navigation, route }) {
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.content, styles.text, { margin: 20 }]}>id: {transaction.id}</Text>
       <Text style={[styles.title, styles.text, { margin: 40 }]}>{transaction.note}</Text>
-      <Text style={[styles.content, styles.text, { margin: 20 }]}>{transaction.amount}</Text>
+      <Text style={[styles.content, styles.text, { margin: 20 }]}>${transaction.amount}</Text>
     </View>
   );
 }

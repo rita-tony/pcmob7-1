@@ -38,7 +38,6 @@ export default function CreateScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ margin: 20 }}>
-      <Text style={[additionalStyles.label, styles.text]}>User Id: {currentUserId}</Text>
         <Text style={[additionalStyles.label, styles.text]}>Enter Note:</Text>
         <TextInput
           style={additionalStyles.input}
@@ -46,7 +45,7 @@ export default function CreateScreen({ navigation }) {
           onChangeText={(text) => setNote(text)}
         />
 
-        <Text style={[additionalStyles.label, styles.text]}>Enter Amount:</Text>
+        <Text style={[additionalStyles.label, styles.text]}>Enter Amount: $</Text>
         <TextInput
           style={additionalStyles.input}
           value={amount}

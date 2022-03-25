@@ -50,7 +50,7 @@ export default function EditScreen({ navigation, route }) {
           onChangeText={(text) => setNote(text)}
         />
 
-        <Text style={[additionalStyles.label, styles.text]}>Enter Amount:</Text>
+        <Text style={[additionalStyles.label, styles.text]}>Enter Amount: $</Text>
         <TextInput
           style={additionalStyles.input}
           value={amount.toString()}
