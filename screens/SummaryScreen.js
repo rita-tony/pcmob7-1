@@ -4,6 +4,7 @@ import axios from "axios";
 import { API, API_BALANCE_AMOUNT } from "../constants/API";
 import { commonStyles, lightStyles, darkStyles } from "../styles/commonStyles";
 import { useSelector, useDispatch } from "react-redux";
+import { FontAwesome5, Entypo } from '@expo/vector-icons'; 
 
 export default function SummaryScreen({ navigation }) {
   const dispatch = useDispatch();
@@ -55,13 +56,13 @@ export default function SummaryScreen({ navigation }) {
     }
   }
 
-
   return (
     <View style={styles.container}>
-      <Text style={[styles.title, styles.text, { margin: 40, color: (balAmt) < 0 ? 'firebrick' : 'mediumaquamarine' }]}>Balance: ${balAmt}</Text>
+      <Text style={[styles.title, styles.text, { marginTop: 40 }]}><Entypo name="wallet" size={80} color={(balAmt) < 0 ? "maroon" : "darkslategrey"}/></Text>
+      <Text style={[styles.title, styles.text, { marginTop: 10, marginBottom: 40, color: (balAmt) < 0 ? 'firebrick' : 'mediumaquamarine' }]}>Balance: ${balAmt}</Text>
       <Text style={[styles.headerTitle, styles.text, { marginLeft: 20, marginTop: 40, textAlign:'left', fontSize:18, textDecorationLine:'underline' }]}>Breakdown:</Text>
-      <Text style={[styles.headerTitle, styles.text, { margin: 20, fontSize:20 }]}>Money In: ${moneyIn}</Text>
-      <Text style={[styles.headerTitle, styles.text, { marginLeft: 20, fontSize:20 }]}>Money Out: ${moneyOut}</Text>
+      <Text style={[styles.headerTitle, styles.text, { margin: 20, fontSize:20 }]}><FontAwesome5 name="piggy-bank" size={20}/>   Money In ${moneyIn}</Text>
+      <Text style={[styles.headerTitle, styles.text, { marginLeft: 20, fontSize:20 }]}><Entypo name="shopping-cart" size={20}/>   Money Out ${moneyOut}</Text>
       
     </View>
   );
