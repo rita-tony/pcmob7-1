@@ -22,10 +22,13 @@ export default function TransactionStack() {
 
   return (
     <InnerStack.Navigator>
-      <InnerStack.Screen name="Index" component={IndexScreen} options={{ title: "Transaction", ...headerOptions, headerLeft: null }} />
-      <InnerStack.Screen name="Add" component={CreateScreen} options={{ title: "Add Transaction", ...headerOptions }} />
+      <InnerStack.Screen name="Index" component={IndexScreen} options={{ title: "Transaction", ...headerOptions, headerLeft: null }} />     
       <InnerStack.Screen name="Details" component={ShowScreen} options={headerOptions} />
-      <InnerStack.Screen name="Edit" component={EditScreen} options={{ title: "Edit Transaction", ...headerOptions }} />
+
+      <InnerStack.Group screenOptions={{presentation: 'modal'}}>
+        <InnerStack.Screen name="Add" component={CreateScreen} options={{ title: "Add Transaction", ...headerOptions }} />
+        <InnerStack.Screen name="Edit" component={EditScreen} options={{ title: "Edit Transaction", ...headerOptions }} />
+      </InnerStack.Group>
     </InnerStack.Navigator>
   )
 }

@@ -94,6 +94,7 @@ export default function SignInSignUpScreen({ navigation }) {
           style={styles.textInput}
           placeholder="Username:"
           placeholderTextColor="#003f5c"
+          maxLength={30}
           value={username}
           onChangeText={(username) => setUsername(username)}
         />
@@ -104,6 +105,7 @@ export default function SignInSignUpScreen({ navigation }) {
           style={styles.textInput}
           placeholder="Password:"
           placeholderTextColor="#003f5c"
+          maxLength={30}
           secureTextEntry={true}
           value={password}
           onChangeText={(pw) => setPassword(pw)}
@@ -116,6 +118,7 @@ export default function SignInSignUpScreen({ navigation }) {
             style={styles.textInput}
             placeholder="Confirm Password:"
             placeholderTextColor="#003f5c"
+            maxLength={30}
             secureTextEntry={true}
             onChangeText={(pw) => setConfirmPassword(pw)}
           />

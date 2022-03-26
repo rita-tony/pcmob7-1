@@ -41,6 +41,7 @@ export default function CreateScreen({ navigation }) {
         <Text style={[additionalStyles.label, styles.text]}>Enter Note:</Text>
         <TextInput
           style={additionalStyles.input}
+          maxLength={50}
           value={note}
           onChangeText={(text) => setNote(text)}
         />
